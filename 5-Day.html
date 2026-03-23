@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Classroom Cravings | cc.co</title>
+
+<style>
+
+body{
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+background:#f3f6ed;
+color:#2f3e2f;
+}
+
+/* HEADER */
+header{
+background:#4e7c3a;
+color:white;
+padding:70px 20px;
+text-align:center;
+border-bottom-left-radius:50px;
+border-bottom-right-radius:50px;
+}
+
+header h1{
+font-size:56px;
+margin:0;
+}
+
+header p{
+font-size:22px;
+margin-top:10px;
+letter-spacing:2px;
+}
+
+.brand{
+margin-top:10px;
+font-size:14px;
+opacity:0.85;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+margin:50px 0;
+}
+
+.apple{
+font-size:110px;
+}
+
+/* BUTTON */
+button{
+background:#4e7c3a;
+color:white;
+border:none;
+padding:15px 25px;
+font-size:16px;
+border-radius:12px;
+cursor:pointer;
+transition:0.2s;
+}
+
+button:hover{
+background:#3a5f2c;
+transform:scale(1.05);
+}
+
+#result{
+margin-top:15px;
+font-weight:bold;
+}
+
+/* BANNER */
+.banner{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:30px;
+}
+
+/* CONTENT */
+section{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* CARDS */
+.card{
+background:white;
+padding:25px;
+margin-bottom:30px;
+border-radius:20px;
+box-shadow:0px 6px 15px rgba(0,0,0,0.08);
+transition:all 0.25s ease;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0px 10px 20px rgba(0,0,0,0.12);
+}
+
+/* CLICKABLE */
+summary{
+cursor:pointer;
+list-style:none;
+}
+
+summary h2{
+display:inline;
+}
+
+details[open]{
+background:#eef6e8;
+}
+
+h2{
+color:#4e7c3a;
+}
+
+ul{
+line-height:1.8;
+}
+
+/* FOOTER */
+footer{
+background:#4e7c3a;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:60px;
+}
+.bio{
+max-width:800px;
+margin:40px auto;
+padding:25px;
+background:white;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.bio h2{
+color:#4e7c3a;
+}
+.bio button{
+margin-top:15px;
+}
+
+#result{
+margin-top:10px;
+font-weight:bold;
+color:#4e7c3a;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Classroom Cravings</h1>
+<p>Take a Bite.</p>
+<div class="brand">cc.co</div>
+</header>
+<div class="bio">
+<h2>About Classroom Cravings</h2>
+
+<p>
+Classroom Cravings is a 5-day meal plan meant for students who may be struggling to find healthy and fairly priced meals for school. Each day provides a new meal with vegetarian and non-vegetarian options, this also includes a fruit, side and a drink. Every meal is meant to be nutritious and filling whilst focusing on still being affordable. The thought process behind this was to help reduce the levels of obisety amoungst teenagers in South africa  
+</p>
+<label><strong>Choose your goal:</strong></label><br><br>
+
+<select id="goal">
+<option value="energy">High Energy ⚡</option>
+<option value="healthy">Balanced 🥗</option>
+<option value="veg">Vegetarian 🌱</option>
+</select>
+
+<br><br>
+
+<button onclick="recommendMeal()">Get Recommendation 🍽️</button>
+
+<p id="result"></p>
+</div>
+<section>
+
+<img class="banner" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352">
+
+<div class="hero">
+<div class="apple">🍎</div>
+<h2>5-Day Healthy School Lunch Plan</h2>
+
+
+</div>
+
+<details class="card">
+<summary><h2>Monday</h2></summary>
+<ul>
+<li><strong>Main:</strong> Rigatoni pasta with guanciale in bolognese sauce topped with mozzarella.</li>
+<li><strong>Vegetarian:</strong> Rigatoni pasta with bolognese sauce.</li>
+<li><strong>Fruit:</strong> Mango slices.</li>
+<li><strong>Drink:</strong> Still or sparkling water.</li>
+</ul>
+<p><strong>Nutritional Value</strong></p>
+<ul>
+<li>High carbohydrates for energy.</li>
+<li>Protein supports growth.</li>
+<li>Mango provides vitamin C.</li>
+<li>Water supports hydration.</li>
+</ul>
+</details>
+
+<details class="card">
+<summary><h2>Tuesday</h2></summary>
+<ul>
+<li><strong>Main:</strong> Brown rice bowl with grilled chicken or beans.</li>
+<li><strong>Fruit:</strong> Banana or apple.</li>
+<li><strong>Side:</strong> Yogurt with granola.</li>
+<li><strong>Drink:</strong> Apple or mango juice.</li>
+</ul>
+<p><strong>Nutritional Value</strong></p>
+<ul>
+<li>Fiber from brown rice.</li>
+<li>Protein from chicken/beans.</li>
+<li>Fruit provides vitamins.</li>
+<li>Calcium from yogurt.</li>
+</ul>
+</details>
+
+<details class="card">
+<summary><h2>Wednesday</h2></summary>
+<ul>
+<li><strong>Main:</strong> Whole-wheat wrap with beef or beans, vegetables, avocado and tahini.</li>
+<li><strong>Sides:</strong> Corn and green beans.</li>
+<li><strong>Drink:</strong> Smoothies.</li>
+</ul>
+<p><strong>Nutritional Value</strong></p>
+<ul>
+<li>Fiber from whole wheat.</li>
+<li>Healthy fats from avocado.</li>
+<li>Vegetables provide nutrients.</li>
+</ul>
+</details>
+
+<details class="card">
+<summary><h2>Thursday</h2></summary>
+<ul>
+<li><strong>Main:</strong> Whole-wheat sandwich with turkey or chicken.</li>
+<li><strong>Side:</strong> Green salad.</li>
+<li><strong>Fruit:</strong> Grapes.</li>
+<li><strong>Drink:</strong> Tropical juice.</li>
+</ul>
+<p><strong>Nutritional Value</strong></p>
+<ul>
+<li>Lean protein supports muscles.</li>
+<li>Fiber improves digestion.</li>
+<li>Fruit provides antioxidants.</li>
+</ul>
+</details>
+
+<details class="card">
+<summary><h2>Friday</h2></summary>
+<ul>
+<li><strong>Main:</strong> Tuna, egg or hummus sandwich.</li>
+<li><strong>Side:</strong> Cherry tomatoes.</li>
+<li><strong>Fruit:</strong> Grapefruit.</li>
+<li><strong>Drink:</strong> Sugar-free flavored water.</li>
+</ul>
+<p><strong>Nutritional Value</strong></p>
+<ul>
+<li>Protein and healthy fats.</li>
+<li>Low sugar hydration.</li>
+<li>Vitamins from fruit and vegetables.</li>
+</ul>
+</details>
+
+</section>
+
+<footer>
+Classroom Cravings © 2026 | cc.co
+</footer>
+
+<script>
+function recommendMeal(){
+
+let goal = document.getElementById("goal").value;
+let result = "";
+
+if(goal === "energy"){
+    result = "Monday – High energy pasta meal perfect for active students.";
+}
+else if(goal === "healthy"){
+    result = "Wednesday – Balanced wrap with protein, fiber and healthy fats.";
+}
+else if(goal === "veg"){
+    result = "Friday – Vegetarian hummus sandwich with fresh vegetables.";
+}
+
+document.getElementById("result").innerText = result;
+
+}
+</script>
+</script>
+
+</body>
+</html>
